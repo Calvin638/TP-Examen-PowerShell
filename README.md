@@ -37,8 +37,6 @@ Ce projet regroupe des scripts PowerShell pour la gestion locale des utilisateur
 - Exécutez les scripts PowerShell en mode administrateur pour garantir leur bon fonctionnement.
 - Adaptez les paramètres (ports, services, profils) selon vos besoins spécifiques.
 
----
-
 ## Contributeurs
 - Calvin Davion
 
@@ -46,3 +44,5 @@ Ce projet regroupe des scripts PowerShell pour la gestion locale des utilisateur
 Ce projet est sous licence MIT. N'hésitez pas à utiliser et modifier le code pour vos propres projets.
 
 *Projet réalisé dans le cadre d'un Examen*
+
+---
