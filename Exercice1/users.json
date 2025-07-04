@@ -10,10 +10,10 @@
   {
     "Nom": "aze",
     "Prenom": "rty",
-    "Email": "azert@gmail.com",
+    "Email": "azerty@gmail.com",
     "Username": "rty.aze",
     "Licence": "E5",
-    "Groupes": "relop"
+    "Groupes": "azerty"
   },
   {
     "Nom": "Bonjour",
@@ -22,5 +22,13 @@
     "Username": "Enrevoir.Bonjour",
     "Licence": "E3",
     "Groupes": "tryops"
+  },
+  {
+    "Nom": "Dupont",
+    "Prenom": "Pierre",
+    "Email": "pierredupont@gmail.com",
+    "Username": "Pierre.Dupont",
+    "Licence": "E3",
+    "Groupes": "com"
   }
 ]

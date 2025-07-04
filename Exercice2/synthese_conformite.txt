@@ -1,0 +1,11 @@
+Note de synthèse de conformité du poste
+=======================================
+
+- Antivirus/Defender actif : Oui
+- Mises à jour Windows appliquées : Non ou inconnu
+- Chiffrement BitLocker : Non ou inconnu
+- Journalisation locale : Oui
+
+Commentaires :
+- Des mises à jour Windows sont en attente ou l'état n'a pas pu être vérifié.
+- Le chiffrement BitLocker n'est pas actif ou n'a pas pu être vérifié.

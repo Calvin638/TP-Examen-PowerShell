@@ -1,0 +1,38 @@
+Politique de pare-feu locale pour accès VPN
+===========================================
+
+Ce document explique les règles de pare-feu appliquées par le script maintenance-securite.ps1.
+
+1. Blocage par défaut
+---------------------
+Le script configure le profil de pare-feu "Privé" pour :
+- Bloquer toutes les connexions entrantes (inbound)
+- Bloquer toutes les connexions sortantes (outbound)
+
+Cela signifie qu'aucune communication réseau n'est autorisée, sauf exceptions explicitement définies.
+
+2. Exceptions autorisées (règles "Autoriser*")
+-----------------------------------------------
+Le script crée des règles pour autoriser uniquement les services nécessaires au fonctionnement d'une connexion VPN et à l'accès Internet de base :
+
+- **DNS sortant (UDP 53)** : Permet la résolution de noms de domaine.
+- **DHCP sortant (UDP 67, 68)** : Permet l'obtention d'une adresse IP dynamique.
+- **OpenVPN sortant (UDP 1194)** : Permet la connexion à un serveur VPN utilisant le protocole OpenVPN (modifiable selon votre solution VPN).
+- **HTTP sortant (TCP 80)** : Permet la navigation web non sécurisée.
+- **HTTPS sortant (TCP 443)** : Permet la navigation web sécurisée.
+
+3. Visualisation et gestion
+---------------------------
+Le script affiche la configuration du profil "Privé" et la liste des règles personnalisées créées.
+
+4. Suppression des règles
+-------------------------
+En fin de script, il est proposé de supprimer toutes les règles créées par la politique VPN.
+
+5. Adaptation
+-------------
+Vous pouvez adapter les ports, protocoles et services autorisés selon les besoins spécifiques de votre environnement VPN ou de votre entreprise.
+
+Résumé :
+--------
+Cette politique vise à renforcer la sécurité lors d'un accès VPN en ne laissant passer que le strict nécessaire, tout en bloquant tout le reste par défaut. 

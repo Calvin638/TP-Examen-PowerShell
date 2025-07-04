@@ -6,7 +6,7 @@
     ]
   },
   {
-    "Nom": "relop",
+    "Nom": "azerty",
     "Membres": [
       "rty.aze"
     ]
@@ -15,6 +15,12 @@
     "Nom": "tryops",
     "Membres": [
       "Enrevoir.Bonjour"
+    ]
+  },
+  {
+    "Nom": "com",
+    "Membres": [
+      "Pierre.Dupont"
     ]
   }
 ]

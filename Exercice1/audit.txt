@@ -1,0 +1,7 @@
+AUDIT DE LA GESTION LOCALE
+===========================
+Nombre d'utilisateurs : 4
+Groupes créés : test, azerty, tryops, com
+Licences utilisées :
+  E3 : 2 utilisateur(s)
+  E5 : 2 utilisateur(s)

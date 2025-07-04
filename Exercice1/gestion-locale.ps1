@@ -110,3 +110,49 @@ $rapport = $users | ForEach-Object {
 $rapport | Export-Csv -Path "./rapport.csv" -NoTypeInformation
 
 Write-Host "Toutes les opérations sont terminées. Rapport généré dans rapport.csv." -ForegroundColor Green
+
+
+# --- Audit des utilisateurs, groupes et licences ---
+
+# Charger les données
+$usersPath = "./users.json"
+$groupsPath = "./groups.json"
+$users = @()
+$groups = @()
+if (Test-Path $usersPath) {
+    $users = Get-Content $usersPath | ConvertFrom-Json
+    if ($users -isnot [System.Collections.IEnumerable]) { $users = @($users) }
+}
+if (Test-Path $groupsPath) {
+    $groups = Get-Content $groupsPath | ConvertFrom-Json
+    if ($groups -isnot [System.Collections.IEnumerable]) { $groups = @($groups) }
+}
+
+# Nombre d'utilisateurs
+$nbUsers = $users.Count
+# Groupes créés
+$groupNames = $groups | ForEach-Object { $_.Nom }
+# Licences utilisées
+$licenses = $users | Group-Object Licence | Select-Object Name,Count
+
+Write-Host "\n--- AUDIT ---" -ForegroundColor Cyan
+Write-Host "Nombre d'utilisateurs : $nbUsers"
+Write-Host "Groupes créés : $($groupNames -join ', ')"
+Write-Host "Licences utilisées :"
+foreach ($lic in $licenses) {
+    Write-Host "  $($lic.Name) : $($lic.Count) utilisateur(s)"
+}
+
+# Générer un fichier audit.txt
+$audit = @()
+$audit += "AUDIT DE LA GESTION LOCALE"
+$audit += "==========================="
+$audit += "Nombre d'utilisateurs : $nbUsers"
+$audit += "Groupes créés : $($groupNames -join ', ')"
+$audit += "Licences utilisées :"
+foreach ($lic in $licenses) {
+    $audit += "  $($lic.Name) : $($lic.Count) utilisateur(s)"
+}
+$audit | Set-Content -Path "audit.txt" -Encoding UTF8
+
+Write-Host "\nAudit enregistré dans audit.txt" -ForegroundColor Green 
