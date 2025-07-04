@@ -1,0 +1,26 @@
+[
+  {
+    "Nom": "Doe",
+    "Prenom": "John",
+    "Email": "johndoe@gmail.com",
+    "Username": "John.Doe",
+    "Licence": "E5",
+    "Groupes": "test"
+  },
+  {
+    "Nom": "aze",
+    "Prenom": "rty",
+    "Email": "azert@gmail.com",
+    "Username": "rty.aze",
+    "Licence": "E5",
+    "Groupes": "relop"
+  },
+  {
+    "Nom": "Bonjour",
+    "Prenom": "Enrevoir",
+    "Email": "bj@gmail.com",
+    "Username": "Enrevoir.Bonjour",
+    "Licence": "E3",
+    "Groupes": "tryops"
+  }
+]

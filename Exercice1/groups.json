@@ -1,0 +1,20 @@
+[
+  {
+    "Nom": "test",
+    "Membres": [
+      "John.Doe"
+    ]
+  },
+  {
+    "Nom": "relop",
+    "Membres": [
+      "rty.aze"
+    ]
+  },
+  {
+    "Nom": "tryops",
+    "Membres": [
+      "Enrevoir.Bonjour"
+    ]
+  }
+]
