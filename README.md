@@ -43,6 +43,6 @@ Ce projet regroupe des scripts PowerShell pour la gestion locale des utilisateur
 ## License
 Ce projet est sous licence MIT. N'hésitez pas à utiliser et modifier le code pour vos propres projets.
 
+---
 *Projet réalisé dans le cadre d'un Examen*
 
----
